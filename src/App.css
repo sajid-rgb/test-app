@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+  background-color: whitesmoke;
+  width: 100%;
+  margin-top: 0px;
+  padding: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav ul {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px ;
+  padding: 10px;
+}
+.nav ul li {
+  list-style: none;
+  font-size:20px;
+  font-weight: 400;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lists,.posts{
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lists{
+  grid-template-columns: auto auto auto;
+}
+
+.posts{
+  grid-template-columns: auto;
+}
+
+.list-column{
+  width: 95%;
+  margin-left: 3%;
+}
+
+.card, .card-for-post {
+  width: 100%;
+  height: auto;
+  color: #000;
+  text-decoration: none;
+  background-color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+}
+.card h5,p{
+  margin-top: 0px;
+  text-decoration: none;
+}
+.card-for-post p{
+  margin-left: 10px;
+}
+.error{
+  color: red;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+}
+.loader{
+  display: flex;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .lists{
+    grid-template-columns: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .card-for-post {
+    height: auto;
+    text-align: justify;
+  }
+  .card-for-post h5, p{
+    width: 85%;
+    text-align: center;
   }
 }
